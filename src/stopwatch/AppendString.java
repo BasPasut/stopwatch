@@ -7,10 +7,21 @@ package stopwatch;
  */
 public class AppendString implements Runnable{
 	int count;
+	
+	/**
+	 * Initialize the AppendStringTask with a specific size.
+	 * 
+	 * @param size
+	 *            
+	 */
 	public AppendString(int count){
 		this.count = count;
 	}
 	
+	/**
+	 * Add char 'a' to the String until it reaches final size and print the
+	 * result length to the console.
+	 */
 	@Override
 	public void run() {
 		final char CHAR = 'a';
