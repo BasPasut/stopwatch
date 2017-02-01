@@ -27,8 +27,3 @@ Answer : The time to sum double is the fastest because it is primitive data type
 --> Why is there such a big difference in the time used to append chars to a String and to a StringBuilder?
 Even though we eventually "copy" the StringBuilder into a String so the final result is the same.
 Answer : Because when we build String, it keep the information in one String. On the other hand, StringBuilder can keep information in both chars and String so it can save more memories and time.
-
---> why is there a significant difference in times to sum double, Double, and BigDecimal values?
-Answer : 
-
-     
