@@ -1,5 +1,12 @@
 package stopwatch;
 
+/**
+ * Perform some common tasks involving strings and doubles, to
+ * compare speed of using different data types.
+ * 
+ * @author Pasut Kittiprapas
+ *
+ */
 public class Main {
 	
 	public static void main(String[] args) {
