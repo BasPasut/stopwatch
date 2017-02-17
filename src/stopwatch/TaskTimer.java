@@ -19,7 +19,9 @@ public class TaskTimer {
 		stopwatch.start();
 		run.run();
 		stopwatch.stop();
+		System.out.println(run.toString());
 		System.out.printf("Elapsed time %.6f sec\n\n", stopwatch.getElapsed());
+		
 	}
 
 }

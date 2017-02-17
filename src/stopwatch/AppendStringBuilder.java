@@ -2,21 +2,24 @@ package stopwatch;
 
 /**
  * Append chars to StringBuilder.
+ * 
  * @author Pasut Kittiprapas
  *
  */
 public class AppendStringBuilder implements Runnable {
 	int count;
-	
+	String result;
+
 	/**
 	 * Initialize the AppendStringTask with a specific size.
 	 * 
 	 * @param count
 	 */
-	public AppendStringBuilder(int count){
+	public AppendStringBuilder(int count) {
 		this.count = count;
+		this.result = "";
 	}
-	
+
 	/**
 	 * Add char 'a' to the StringBuilder until it reaches final size and print
 	 * 
@@ -25,14 +28,18 @@ public class AppendStringBuilder implements Runnable {
 	@Override
 	public void run() {
 		final char CHAR = 'a';
-		System.out.printf("Append %,d chars to StringBuilder\n", count);
-		StringBuilder builder = new StringBuilder(); 
+		StringBuilder builder = new StringBuilder();
 		int k = 0;
-		while(k++ < count) {
+		while (k++ < count) {
 			builder = builder.append(CHAR);
 		}
 		// now create a String from the result, to be compatible with task 1.
-		String result = builder.toString();
-		System.out.println("final string length = " + result.length());
+		this.result = builder.toString();
+
+	}
+
+	public String toString() {
+		return String.format("Append %,d chars to StringBuilder\n", count)
+				+ String.format("final string length = " + result.length());
 	}
 }
